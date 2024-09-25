@@ -16,3 +16,20 @@ helloBtn.addEventListener("click", function () {
 changeTitleBtn.addEventListener("click", function () {
   title.textContent = "O Titulo foi mudado utilizando JS!";
 });
+
+//selecionar os paragrafos com a classe mensagem2
+const mensagens = document.getElementsByClassName('mensagem2')
+
+
+//criar o borão que vai modificar as frases
+const botaoDeCriarAsFrases = document.createElement('button');
+botaoDeCriarAsFrases.textContent = 'Modificar as Frases';
+document.querySelector('.container').appendChild(botaoDeCriarAsFrases);
+
+//evento de clique para modifcar as frases
+botaoDeCriarAsFrases.addEventListener('click',function(){
+    for(let i = 0; i < mensagens.length; i++){
+        mensagens[i].textContent = `Frase modificada ${i} utilizando JS`
+    }
+});
+
